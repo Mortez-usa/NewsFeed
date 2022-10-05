@@ -1,16 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SearchForm from './SearchForm.jsx';
 
 function Navbar() {
 	return (
 		<nav className='navbar'>
 			<h2>
-				<Link to='/' className='siteTitle'>
+				<Link to='./News' className='siteTitle'>
 					Morteza News
 				</Link>
 			</h2>
-			<SearchForm />
 			<ul>
 				<li className='active'>
 					<Link to='/News'>News</Link>

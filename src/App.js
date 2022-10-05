@@ -1,15 +1,65 @@
 import Navbar from './components/Navbar.jsx';
+import SearchForm from './components/SearchForm.jsx';
+import SearchResults from './components/SearchResults.js';
 import News from './pages/News.js';
 import Sport from './pages/Sport.js';
 import Culture from './pages/Culture.js';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 function App() {
+	const [article, setArticles] = useState([]);
+	const [searchString, setSearchString] = useState('');
+
+	const searchOptions = {
+		key: process.env.REACT_APP_NEWSFEED_KEY,
+		pageSize: 10,
+		total: 1,
+		orderBy: 'newest',
+		api: 'https://content.guardianapis.com',
+		endpoint: '/search?',
+	};
+
+	
+
+	function handleChange(event) {
+		setSearchString(event.target.value);
+	}
+
+	function handleSubmit(event) {
+		event.preventDefault();
+		getArticle(searchString);
+	}
+
+	function getArticle(searchString) {
+		const guardianUrl = `https://content.guardianapis.com/search?q=${searchString}&api-key=${searchOptions.key}`;
+
+		fetch(guardianUrl)
+			.then((res) => res.json())
+			.then((data) => {
+				setArticles(data.response.results);
+				setSearchString('');
+			})
+			.catch(console.error);
+	}
+
+	useEffect(() => {
+		getArticle(searchString);
+	}, []);
+
 	return (
-		<div className='container'>
+		<div>
 			<Navbar />
-			<h1>test</h1>
+			<div>
+				<SearchForm
+					handleChange={handleChange}
+					handleSubmit={handleSubmit}
+					searchString={searchString}
+					article={article}
+				/>
+				
+			</div>
 			<div>
 				<Routes>
 					<Route path='/Culture' element={<Culture />} />

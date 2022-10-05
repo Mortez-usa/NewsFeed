@@ -1,10 +1,21 @@
 import React from 'react';
+import SearchResults from './SearchResults';
 
-function SearchForm() {
+function SearchForm({ handleSubmit, handleChange, searchString, article }) {
 	return (
-		<form className="form-horizontal">
-			<input className='' placeholder="Search" type="text" name="searchString" required />
-			<button type="submit">Search</button>
+		<form onSubmit={handleSubmit} className='form-horizontal'>
+			<input
+				placeholder='Search'
+				type='text'
+				name='searchString'
+				required
+				onChange={handleChange}
+				value={searchString}
+			/>
+			<button className='btn-search' type='submit'>
+				Search
+			</button>
+			<SearchResults article={article} />
 		</form>
 	);
 }

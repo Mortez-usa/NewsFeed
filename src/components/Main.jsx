@@ -13,9 +13,11 @@ function Main() {
 		endpoint: '/search?',
 	};
 
-	const [getWorldData, setGetWorldData] = useState(null);
+	 const [getWorldData, setGetWorldData] = useState(null);
 
 	const fullUrl = `https://content.guardianapis.com/search?q=12%20years%20a%20slave&format=json&total=1&tag=film/film,tone/reviews&from-date=2010-01-01&show-tags=contributor&show-fields=starRating,headline,thumbnail,short-url&order-by=relevance&api-key=${searchOptions.key}`;
+
+	//const fullUrl = mockdata.json;
 
 	const fetchData = () => {
 		fetch(fullUrl)
@@ -31,8 +33,7 @@ function Main() {
 	}, []);
 
 	return (
-		<div className='main'>
-			<h1>Main Menu</h1>
+		<div className='main-menu'>
 			<WorldNews worldNewsGetData={getWorldData} />
 		</div>
 	);
