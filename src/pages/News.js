@@ -1,14 +1,14 @@
 import React from 'react';
 import Main from '../components/Main.jsx';
 import Weather from '../components/Weather.jsx';
-import SideLeft from '../components/SideLeft.jsx';
+import SideLeft from '../components/Footer.jsx';
 
 function News() {
 
 	return (
 		<div className='container'>
 			<Main />
-			<Weather />
+			{/* <Weather /> */}
 		</div>
 	);
 }

@@ -14,17 +14,26 @@ function Main() {
 	};
 
 	 const [getWorldData, setGetWorldData] = useState(null);
+	 const [getUsData, setGetUsData] = useState(null);
 
-	const fullUrl = `https://content.guardianapis.com/search?q=12%20years%20a%20slave&format=json&total=1&tag=film/film,tone/reviews&from-date=2010-01-01&show-tags=contributor&show-fields=starRating,headline,thumbnail,short-url&order-by=relevance&api-key=${searchOptions.key}`;
+	const worldUrl = `https://content.guardianapis.com/search?section=world&q=4%20years%20a%20slave&format=json&total=4&from-date=2010-01-01&show-tags=world&show-fields=starRating,headline,thumbnail,short-url&order-by=relevance&api-key=${searchOptions.key}`;
+
+	const usUrl = `https://content.guardianapis.com/search?section=us-news&q=4%20years%20a%20slave&format=json&total=4&from-date=2010-01-01&show-tags=world&show-fields=starRating,headline,thumbnail,short-url&order-by=relevance&api-key=${searchOptions.key}`;
 
 	//const fullUrl = mockdata.json;
 
 	const fetchData = () => {
-		fetch(fullUrl)
+		fetch(worldUrl)
 			.then((res) => res.json())
 			.then((data) => {
 				setGetWorldData(data.response.results);
-				console.log(getWorldData);
+			});
+
+
+		fetch(usUrl)
+			.then((res) => res.json())
+			.then((data) => {
+				setGetUsData(data.response.results);
 			});
 	};
 
@@ -32,9 +41,12 @@ function Main() {
 		fetchData();
 	}, []);
 
+
 	return (
 		<div className='main-menu'>
-			<WorldNews worldNewsGetData={getWorldData} />
+			<WorldNews 
+				worldNewsGetData={getWorldData}
+				getUsData={getUsData} />
 		</div>
 	);
 }

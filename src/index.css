@@ -1,6 +1,11 @@
 * {
 	box-sizing: border-box;
 }
+
+*:focus {
+	outline: none;
+}
+
 body {
 	margin: 0;
 	font-family: serif, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -58,13 +63,16 @@ code {
 .container {
 	background-color: rgb(255, 255, 255);
 	display: grid;
-	grid-template-columns: 1fr 4fr;
+	grid-template-columns: 1fr;
 	grid-template-rows: 1fr;
 }
 
 .main-menu {
 	background-color: white;
 	padding: 10px;
+	margin: 0;
+	display: flex;
+	justify-content: center;
 }
 
 .world-news {
@@ -87,10 +95,12 @@ code {
 
 .column-two {
 	grid-column: 2;
+	margin: 10px;
 }
 
 .column-one {
 	grid-column: 1;
+	margin: 10px;
 }
 
 .weather {
@@ -101,13 +111,17 @@ code {
 	max-width: 300px;
 }
 
-.side-left {
-	background-color: rgb(120, 166, 196);
+.footer {
+	background-color: lightgray;
+	color: rgb(0, 0, 0);
 	padding: 10px;
+	text-align: center;
 }
 
 .form-horizontal {
 	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
 	align-items: center;
 	background-color: black;
 }
@@ -115,6 +129,16 @@ code {
 .headline {
 	text-align: left;
 	grid-column: 2;
+	padding: 5px;
+}
+
+a:link {
+	text-decoration: none;
+	color: black;
+}
+
+a:visited {
+	color: gray;
 }
 
 .input {
@@ -132,4 +156,33 @@ code {
 }
 
 .headline-card {
+}
+
+.search-bar {
+}
+
+.search-bar-txt a:link {
+	color: snow;
+	text-align: center;
+}
+
+.form-control {
+	width: 600px;
+	height: 40px;
+	margin: 5px;
+	border-radius: 5px;
+	border-style: none;
+	font-size: 26px;
+}
+
+.search-pack {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: none;
+	justify-content: center;
+	align-items: center;
+}
+
+hr {
+	margin: 0 auto;
 }

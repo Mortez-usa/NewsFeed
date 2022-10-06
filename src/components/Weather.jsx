@@ -2,8 +2,6 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 
 function Weather() {
-
-	 
 	// let weather = {
 	// 	apiKey: '39de9b380dcb4807b9f5d8748aeeb669',
 	// 	fetchWeather: function (city) {
@@ -35,17 +33,13 @@ function Weather() {
 	// 	},
 	// };
 
-
 	// document
 	// 	.querySelector('.search-button')
 	// 	.addEventListener('click', function () {
 	// 		weather.search();
 	// 	});
 
-
-	
-
-/////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////
 	return (
 		<div className='weather'>
 			<h2>Weather</h2>

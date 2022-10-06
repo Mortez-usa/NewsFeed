@@ -1,6 +1,6 @@
 import Navbar from './components/Navbar.jsx';
 import SearchForm from './components/SearchForm.jsx';
-import SearchResults from './components/SearchResults.js';
+import Footer from './components/Footer.jsx';
 import News from './pages/News.js';
 import Sport from './pages/Sport.js';
 import Culture from './pages/Culture.js';
@@ -44,9 +44,9 @@ function App() {
 			.catch(console.error);
 	}
 
-	useEffect(() => {
-		getArticle(searchString);
-	}, []);
+	// useEffect(() => {
+	// 	getArticle(searchString);
+	// }, []);
 
 	return (
 		<div>
@@ -58,7 +58,6 @@ function App() {
 					searchString={searchString}
 					article={article}
 				/>
-				
 			</div>
 			<div>
 				<Routes>
@@ -68,6 +67,7 @@ function App() {
 					<Route />
 				</Routes>
 			</div>
+			<Footer />
 		</div>
 	);
 }

@@ -4,17 +4,22 @@ import SearchResults from './SearchResults';
 function SearchForm({ handleSubmit, handleChange, searchString, article }) {
 	return (
 		<form onSubmit={handleSubmit} className='form-horizontal'>
-			<input
-				placeholder='Search'
-				type='text'
-				name='searchString'
-				required
-				onChange={handleChange}
-				value={searchString}
-			/>
-			<button className='btn-search' type='submit'>
-				Search
-			</button>
+			<div className='search-pack'>
+				<input
+					className='form-control'
+					placeholder='Search Guardian'
+					type='text'
+					name='searchString'
+					required
+					onChange={handleChange}
+					value={searchString}
+				/>
+				<button className='btn-search' type='submit'>
+					Search
+				</button>
+				
+			</div>
+
 			<SearchResults article={article} />
 		</form>
 	);

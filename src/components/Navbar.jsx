@@ -5,7 +5,7 @@ function Navbar() {
 	return (
 		<nav className='navbar'>
 			<h2>
-				<Link to='./News' className='siteTitle'>
+				<Link to='/News' className='siteTitle'>
 					Morteza News
 				</Link>
 			</h2>
