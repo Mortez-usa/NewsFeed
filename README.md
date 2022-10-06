@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App](https://main--moretezanewsfeed.netlify.app/.
 
 
-### Description: this project is news feed website that replicates Guardian newspaper website and let users to see the content of the website in a simplarer and cleaner way.
+### Description: this project is about a news feed website that replicates Guardian newspaper website and let users to see the content of the website in a simplarer and cleaner way.
 
 <img src="./src/screenshot.png" alt="screenshot" title="screenshot">
 
