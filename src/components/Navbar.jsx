@@ -2,14 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
-	function refreshPage() {
-		window.location.reload(true);
-	}
+	
 	return (
 		<nav className='navbar'>
-			<h2 onClick={refreshPage}>
+			<h2>
 				<Link
-					to='https://main--moretezanewsfeed.netlify.app/News'
+					to='/'
 					className='siteTitle'>
 					Morteza News
 				</Link>

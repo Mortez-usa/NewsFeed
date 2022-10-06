@@ -67,6 +67,7 @@ function App() {
 					<Route />
 				</Routes>
 			</div>
+			<News />
 			<Footer />
 		</div>
 	);
