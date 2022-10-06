@@ -186,3 +186,7 @@ a:visited {
 hr {
 	margin: 0 auto;
 }
+
+.found-nothing {
+	color: snow;
+}

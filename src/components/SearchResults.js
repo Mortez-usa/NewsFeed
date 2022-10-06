@@ -2,7 +2,7 @@ import React from 'react';
 
 function SearchResults({ article }) {
 	if (!article.length) {
-		return <h2>About Zero results!</h2>;
+		return <h2 className="found-nothing">About Zero results!</h2>;
 	}
 
 	function goHome() {
