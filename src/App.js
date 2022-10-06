@@ -58,16 +58,14 @@ function App() {
 					article={article}
 				/>
 			</div>
-
 			<div>
 				<Routes>
-					<Route path='/Culture' element={<Culture />} />
 					<Route path='/News' element={<News />} />
+					<Route path='/Culture' element={<Culture />} />
 					<Route path='/Sport' element={<Sport />} />
 					<Route />
 				</Routes>
 			</div>
-			<News />
 			<Footer />
 		</div>
 	);

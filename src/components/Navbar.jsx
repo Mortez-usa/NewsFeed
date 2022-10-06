@@ -2,13 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
-	
+	 
 	return (
 		<nav className='navbar'>
 			<h2>
-				<Link
-					to='/'
-					className='siteTitle'>
+				<Link to='./News' className='siteTitle'>
 					Morteza News
 				</Link>
 			</h2>
