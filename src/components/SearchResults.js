@@ -1,12 +1,17 @@
 import React from 'react';
 
-function SearchResults({ article }) {
+function SearchResults({ article, searchString }) {
 	if (!article.length) {
-		return <h2 className="found-nothing">About Zero results!</h2>;
+		console.log(article);
+		return (
+			<h2 onSubmit={SearchResults} className='found-nothing'>
+				About Zero results!
+			</h2>
+		);
 	}
 
 	function goHome() {
-		window.location.replace('./News');
+		window.location.replace('/News');
 	}
 	return (
 		<div>

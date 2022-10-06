@@ -2,10 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
+	function refreshPage() {
+		window.location.reload(true);
+	}
 	return (
 		<nav className='navbar'>
-			<h2>
-				<Link to='/News' className='siteTitle'>
+			<h2 onClick={refreshPage}>
+				<Link to='./News' className='siteTitle'>
 					Morteza News
 				</Link>
 			</h2>

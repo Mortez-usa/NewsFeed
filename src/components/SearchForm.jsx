@@ -17,9 +17,7 @@ function SearchForm({ handleSubmit, handleChange, searchString, article }) {
 				<button className='btn-search' type='submit'>
 					Search
 				</button>
-				
 			</div>
-
 			<SearchResults article={article} />
 		</form>
 	);

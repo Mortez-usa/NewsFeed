@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar.jsx';
 import SearchForm from './components/SearchForm.jsx';
 import Footer from './components/Footer.jsx';
+import SearchResults from './components/SearchResults';
 import News from './pages/News.js';
 import Sport from './pages/Sport.js';
 import Culture from './pages/Culture.js';
@@ -20,8 +21,6 @@ function App() {
 		api: 'https://content.guardianapis.com',
 		endpoint: '/search?',
 	};
-
-	
 
 	function handleChange(event) {
 		setSearchString(event.target.value);
@@ -44,9 +43,9 @@ function App() {
 			.catch(console.error);
 	}
 
-	// useEffect(() => {
-	// 	getArticle(searchString);
-	// }, []);
+	useEffect(() => {
+		getArticle(searchString);
+	}, []);
 
 	return (
 		<div>
@@ -59,6 +58,7 @@ function App() {
 					article={article}
 				/>
 			</div>
+
 			<div>
 				<Routes>
 					<Route path='/Culture' element={<Culture />} />
