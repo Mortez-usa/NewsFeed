@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://main--moretezanews
 
 ### Description: this project is news feed website that replicates Guardian newspaper website and let users to see the content of the website in a simplarer and cleaner way.
 
-![homepage](/Users/Morteza/sei/projects/NewsFeed/screenshot.png)
+![screenshot](./screenshot.png)
 ### Technology Used: html, css, javascript, react.
 
 ### Installation: for seeing the latest news about united states and world click on the top-right 'News' page.
