@@ -8,7 +8,9 @@ function Navbar() {
 	return (
 		<nav className='navbar'>
 			<h2 onClick={refreshPage}>
-				<Link to='./News' className='siteTitle'>
+				<Link
+					to='https://main--moretezanewsfeed.netlify.app/News'
+					className='siteTitle'>
 					Morteza News
 				</Link>
 			</h2>
