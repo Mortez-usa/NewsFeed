@@ -1,7 +1,6 @@
 import Navbar from './components/Navbar.jsx';
 import SearchForm from './components/SearchForm.jsx';
 import Footer from './components/Footer.jsx';
-import SearchResults from './components/SearchResults';
 import News from './pages/News.js';
 import Sport from './pages/Sport.js';
 import Culture from './pages/Culture.js';
@@ -50,6 +49,7 @@ function App() {
 	return (
 		<div>
 			<Navbar />
+
 			<div>
 				<SearchForm
 					handleChange={handleChange}
@@ -58,6 +58,7 @@ function App() {
 					article={article}
 				/>
 			</div>
+
 			<div>
 				<Routes>
 					<Route path='/News' element={<News />} />
